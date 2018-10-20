@@ -1,14 +1,27 @@
 + hola
-- Bienvenido a la Aerolínea PROTECO 
-^  Hola ¿Como estas?
+- Bienvenido a la Aerolínea PROTECO, \n
+^  ¿Como estas? {topic=saludo}
+
+> topic saludo
+  + [*] bien [*]
+  - Es bueno escucharlo, en que te puedo ayudar? {topic=random}
+
+  + [*] mal [*]
+  - Con un viaje todo se arregla {topic=random}
+
+  + *
+  - Comprendo en que te puedo ayudar? {topic=random}
+< topic
+
 + bien quiero viajar
 - ¿De donde partes?
+
 + parto de *
 - <set origen=<star>>
 ^ ¿Hacía donde vas?
+
 + voy a *
 - <set destino=<star>> ¿Podrias proporcionar la fecha y hora ?
+
 + *
-
 - Viajas de <get origen> a <get destino> el <star>
-
