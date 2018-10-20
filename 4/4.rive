@@ -1,21 +1,34 @@
 ! version = 2.0
 
-+ Hola
-+ Buenas Tardes
-- Buenas Tardes
-- ¿Cómo estas?
--¿Quiere agendar un vuelo o recibir información del estado de su vuelo?
-+ Recibir información.
-- Lo sentimos por el momento el estado de su vuelo no se encuentra disponible
-+ Agendar un vuelo
-- ¿Cúal es la ciudad o aeropuerto de salida?
++ hola
++ buenas tardes
+- buenas tardes
+- como estas
+- quiere agendar un vuelo o recibir informacion del estado de su vuelo
++ recibir informacion
+- lo sentimos por el momento el estado de su vuelo no se encuentra disponible
++ agendar un vuelo
+- cual es la ciudad o aeropuerto de salida
 + *
-- ¿Cúal es la ciudad o aeropuerto de destino?
+- cual es la ciudad o aeropuerto de destino
 + * 
-- ¿Cúal es la fecha de salida?
+- cual es la fecha de salida
 + *
-- ¿Cúal es la hora de salida?
+- cual es la hora de salida
 + * 
-- La información de su vuelo es  salida: <star1> destinoi: <star2>
-- Fecha de salida: <star3>
-- Hora de salida <star4>
+- la informacion de su vuelo es  salida: <star1> destinoi: <star2>
+- fecha de salida: <star3>
+- hora de salida <star4>
++ No me gustas
+- Oye que te pasa {topic=gustar}
+
+>topic gustar
+	+ [*] me gustas [*]
+	- esta bien pero que no se repita {topic=random}
+	
+	+ * 
+	- sigo molesta contigo
+	- siempre es lo mismo
+	- ya no quiero saber nada de ti
+	
+<topic
