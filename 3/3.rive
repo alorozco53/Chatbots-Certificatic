@@ -19,5 +19,16 @@
 - <set hora_de_salida=<formal>> Hora de salida <get hora_de_salida>
 + adios
 - hasta luego
++ bugs
+- Si tu lo dices.{topic=bugs}
 
 
+> topic bugs 
+	+ eso es todo amigo
+	- Hasta luego viejo.{topic=random}
+
+	+ *
+	- No puedo ayudarte viejo
+	- Dame una zanahoria
+	- Mala suerte viejo
+< topic
