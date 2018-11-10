@@ -12,10 +12,14 @@ import os
 
 from pprint import pprint
 from flask import Flask, request
-from dispatcher import ResponseDispatcher, send_message
+from architecture.modules.dispatcher import ResponseDispatcher
+from architecture.structures.fsm import FSM
+from architecture.structures.states import InitState
+from architecture.actuators.messaging import send_message
 
 app = Flask(__name__)
 DISPATCHER = ResponseDispatcher()
+MACHINE = None
 
 @app.route('/', methods=['GET'])
 def verify():
@@ -36,12 +40,23 @@ def webhook():
     """
     Endpoint for processing incoming messaging events
     """
-    global DISPATCHER
+    global DISPATCHER, MACHINE
     data = request.get_json()
     pprint(data)
     parsed = DISPATCHER.dispatch(data)
     pprint(parsed)
-    send_message(parsed['CONTEXT']['user_id'], '¡Quiubo!')
+    
+    #try:
+    if MACHINE is None:
+        MACHINE = FSM(InitState(parsed['CONTEXT']['user_id'],
+                                    parsed))
+    MACHINE.run()
+    MACHINE.transition(parsed)
+    #except:
+        # Botón de "Empezar" seleccionado
+    #print('EMPEZAR')
+    #send_message(parsed['CONTEXT']['user_id'], 'Hola!!!!')
+
     return 'ok', 200
 
 if __name__ == '__main__':
