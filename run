@@ -1,0 +1,27 @@
+#! /usr/bin/env bash
+
+export VERIFY_TOKEN='mybot'
+export PAGE_ACCESS_TOKEN='EAAcO83vdtXABAMbxcdRM3tUIiuyQVr7uYRuw9TYOZB8K2cCaUWZA2FMebjTJ4hBZCkhMixPxqgTKNmKSJYnCM6ad1Y49l92inX7EmH9r6PbDnM0u3cUpdoxN5XsXbC3ZAMbDrlGj6X89YwWHHbKg1vIvndoMmUcjdEijuuc00z8lqqptpGvE'
+
+# Get started message
+curl -X POST -H "Content-Type: application/json" -d '{
+  "get_started":{
+    "payload": "GET_STARTED_PAYLOAD"
+  }
+}' "https://graph.facebook.com/v2.6/me/messenger_profile?access_token="$PAGE_ACCESS_TOKEN
+
+# Greeting text
+curl -X POST -H "Content-Type: application/json" -d '{
+  "greeting":[
+    {
+      "locale":"default",
+      "text":"3, 2, 1... MEME IT RIP!"
+    }, {
+      "locale":"en_US",
+      "text":"Help scientists understand today´s world through memes!"
+    }
+  ]
+}' "https://graph.facebook.com/v2.6/me/messenger_profile?access_token="$PAGE_ACCESS_TOKEN
+
+# Run app
+python3.6 bot.py
