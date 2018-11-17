@@ -18,7 +18,7 @@ class State:
     def run(self):
         pass
 
-    def get_next_state(self, user_input):
+    def get_next_state(self, user_input, parser):
         pass
 
 class InitState(State):
@@ -29,14 +29,21 @@ class InitState(State):
         self.username = global_frame['CONTEXT']['first_name']
 
     def run(self):
-        message = 'Hola {}, mucho gusto!'.format(self.username)
-        send_message(self.user_id, message)
+        try:
+            message = 'INTENT: {}'.format(self.global_frame['CONTEXT']['intent'])
+            send_message(self.user_id, message)
+        except:
+            send_message(self.user_id, 'Hola, {}'.format(self.username))
 
-    def get_next_state(self, user_input):
-        if re.search('(queja)|(sugerencia)|(aclaraci[oó]n)', user_input['MESSAGE']):
-            return Estado2(self.user_id, self.global_frame)
-        else:
-            return Estado3(self.user_id, self.global_frame)
+    def get_next_state(self, user_input, parser):
+        intent = parser.intent_parse(user_input['MESSAGE'],
+                                     intents=list(parser.intents.index))
+        self.global_frame['CONTEXT']['intent'] = intent
+        return self
+        #if re.search('(queja)|(sugerencia)|(aclaraci[oó]n)', user_input['MESSAGE']):
+        #    return Estado2(self.user_id, self.global_frame)
+        #else:
+        #    return Estado3(self.user_id, self.global_frame)
 
 class Estado2(State):
 

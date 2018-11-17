@@ -1,0 +1,260 @@
+Faltan mis 20 días por año,20dias
+Calcular 20 días año,20dias
+¿ pago  20 días por año?,20dias
+Faltan  20 días,20dias
+¿Y mis 20 días por año?,20dias
+por su pollo,Afirmativo
+porfa,Afirmativo
+ok,Afirmativo
+awiwi,Afirmativo
+ey,Afirmativo
+ahuevo,Afirmativo
+simón,Afirmativo
+afirmativo,Afirmativo
+correcto,Afirmativo
+es correcto,Afirmativo
+por su puesto,Afirmativo
+así es,Afirmativo
+continúa,Afirmativo
+Continuar,Afirmativo
+sí,Afirmativo
+Como puedo constituir una sociedad,Pregunta_Constitucion_Sociedad
+Como puedo crear una empresa,Pregunta_Constitucion_Sociedad
+Constitución de sociedad,Pregunta_Constitucion_Sociedad
+Creación de Empresa,Pregunta_Constitucion_Sociedad
+Crear empresa,Pregunta_Constitucion_Sociedad
+Me pueden ayudar a crear mi empresa,Pregunta_Constitucion_Sociedad
+Quiero constituir una sociedad,Pregunta_Constitucion_Sociedad
+Quiero crear una empresa,Pregunta_Constitucion_Sociedad
+Te lo agradezco,Agradecimientos
+Gracias,Agradecimientos
+Muchas gracias,Agradecimientos
+muchísimas gracias,Agradecimientos
+grax,Agradecimientos
+Le agradezco,Agradecimientos
+Ohhh Gracias Max,Agradecimientos
+Eres el mejor,Agradecimientos
+¿En que temas me puedes asesorar?,Asesoria
+Me puedes asesorar,Asesoria
+Temas de asesoria,Asesoria
+Cuentame un chiste,chiste
+jaja,chiste
+jajajajajajaja,chiste
+jejejejeje,chiste
+jijijijiji,chiste
+Estoy aburrido,chiste
+Estoy deprimido,chiste
+Ay ya dime otra cosa,chiste
+Dime un chiste,chiste
+Me quiero reir,chiste
+Mis comiciones,Comisiones
+mas mis comiciones,Comisiones
+Confidencialidad laboral,Confidencialidad_laboral
+¿Para quién trabajas?,Creación
+¿Quién esta detras de ti?,Creación
+¿Quién te hizo?,Creación
+¿Quién te creo?,Creación
+¿Quién es tu papa?,Creación
+¿Quién te programo?,Creación
+En cuanto tiempo me dan mi finiquito,Cuanto_tarda_el_finiquito
+Cuando me llega mi finiquito,Cuanto_tarda_el_finiquito
+Cunto tengo que esperar mi finiquito,Cuanto_tarda_el_finiquito
+Cuando tiene que llegar mi finiquito,Cuanto_tarda_el_finiquito
+Cuanto tarda mi finiquito,Cuanto_tarda_el_finiquito
+me quieres llevar al torito,derecho-administrativo
+me pararon los de tránsito,derecho-administrativo
+la grúa se llevó mi coche,derecho-administrativo
+me llegó una orden de clausura,derecho-administrativo
+quiene clausurar mi negocio,derecho-administrativo
+mi inquilino no se quiere salir de la casa,derecho-civil
+mi caseo no me quiere respetar mi contrato,derecho-civil
+quiero cobrar un pagaré de una persona que no me ha pagado,derecho-civil
+esta tarjeta ha sido clonada,derecho-civil
+tarjeta clonada,derecho-de-protección-de-datos
+quiero divorciar,derecho-familiar
+el tacaño de mi marido no me ha pagado la pensión,derecho-familiar
+esposo no paga pensión alimenticia,derecho-familiar
+tío falleció no dejó testamento,derecho-familiar
+familiar falleció y dejó testamento,derecho-familiar
+me quiero divorciar,derecho-familiar
+me llegó un requerimiento del hacienda,derecho-fiscal
+compañía seguros no quiere reembolsar,derecho-mercantil
+aseguradora no respeto contrato,derecho-mercantil
+clonaron tarjeta,derecho-penal
+robaron casa,derecho-penal
+asesinaron esposa,derecho-penal
+deposité dinero cuenta y no dieron boletos,derecho-penal
+Pidieron hacer depósito y no dieron boletos,derecho-penal
+que pasa con 1 primero de mayo,Descanso
+el 1o de mayo se trabaja?,Descanso
+EL 1 DE MAYO SE DESCANSA,Descanso
+Despido injustiicado,Despido_injustificado
+Hablame sobre el despido injustficado,Despido_injustificado
+Mi jefe me corrio sin motivo,Despido_injustificado
+Despido sin motivo ni rason,Despido_injustificado
+¿Cuál es la fecha de hoy?,Día
+¿Qué día de la semana es hoy?,Día
+¿Qué día es hoy?,Día
+¿A qué estamos hoy?,Día
+¿Cuál día de la semana es hoy?,Día
+qué es el mínimo de salario,DudaSalarioMinimo
+cuánto me toca de salario mínimo?,DudaSalarioMinimo
+cuál es el salario mínimo?,DudaSalarioMinimo
+quiero saber cuánto es el salario mínimo,DudaSalarioMinimo
+Saber. Cuanto. Es Salario. Minimo,DudaSalarioMinimo
+Congratulations,Felicitaciones
+Felicidades,Felicitaciones
+Muy bien,Felicitaciones
+Creo que fue,Inseguro
+Creo que fue en,Inseguro
+No lo sé,Inseguro
+No lo recuerdo bien,Inseguro
+¿Para qué?,Inseguro
+No estoy seguro,Inseguro
+¿Para qué lo necesitas?,Inseguro
+¿Lo necesitas mucho?,Inseguro
+No me acuerdo,Inseguro
+¿Qué signo eres?,Nacimiento
+¿Cuándo cumples años?,Nacimiento
+¿Cuántos años tienes?,Nacimiento
+¿Cuándo naciste?,Nacimiento
+¿Cumples años?,Nacimiento
+no,Negativo
+para nada,Negativo
+negativo,Negativo
+es incorrecto,Negativo
+incorrecto,Negativo
+eso es un error,Negativo
+por supuesto que no,Negativo
+nel,Negativo
+nel pastel,Negativo
+nelson,Negativo
+En realidad aun no me despiden,NoDespedido
+Creo que estoy por ser despedido,NoDespedido
+Creo que me van a despedir,NoDespedido
+En realidad todavía no me despiden,NoDespedido
+Aun no soy despedido,NoDespedido
+Aun no he sido despedido,NoDespedido
+¿Cuándo pagar aguinaldo?,Pregunta_de_aguinaldo
+¿Cuánto corresponde aguinaldo?,Pregunta_de_aguinaldo
+¿Cuánto toca aguinaldo?,Pregunta_de_aguinaldo
+¿Cómo calcular aguinaldo?,Pregunta_de_aguinaldo
+Aguinaldo,Pregunta_de_aguinaldo
+¿Cómo estás?,Pregunta_de_estado
+¿Cómo estás max?,Pregunta_de_estado
+¿Cómo te va max?,Pregunta_de_estado
+¿Cómo te va?,Pregunta_de_estado
+¿Cómo has estado?,Pregunta_de_estado
+¿Qué tal te va max?,Pregunta_de_estado
+¿Cómo va tu día max?,Pregunta_de_estado
+¿Cómo va tu día?,Pregunta_de_estado
+¿ puedo calcular finiquito?,Pregunta_de_finiquito
+¿Cuanto toca renuncia?,Pregunta_de_finiquito
+Pagar de finiquito,Pregunta_de_finiquito
+"¡Dime mi finiquito, Max!",Pregunta_de_finiquito
+¿Me puedes decir el finiquito que me toca?,Pregunta_de_finiquito
+Calcular finiquito,Pregunta_de_finiquito
+calcular renuncia,Pregunta_de_finiquito
+renunciar cuánto pagar,Pregunta_de_finiquito
+Renuncia,Pregunta_de_finiquito
+Finiquito,Pregunta_de_finiquito
+Quiero renunciar,Pregunta_de_finiquito
+pues con la novedad de que el puto de mi jefe me va a a mandar alv,Pregunta_de_liquidacion
+Liquidacion,Pregunta_de_liquidacion
+Quiero saber cuánto me toca de liquidación,Pregunta_de_liquidacion
+despido,Pregunta_de_liquidacion
+¿Despiden cuánto tendrían pagar?,Pregunta_de_liquidacion
+¿Calcular liquidación?,Pregunta_de_liquidacion
+Me van despedir,Pregunta_de_liquidacion
+¿Despiden cuánto  tienen pagarme?,Pregunta_de_liquidacion
+¿Cuánto tienen pagar liquidación?,Pregunta_de_liquidacion
+¿Y despidierán cuánto tendrían pagar?,Pregunta_de_liquidacion
+quieren baja.,Pregunta_de_liquidacion
+quieren correr.,Pregunta_de_liquidacion
+mi jefe me va a correr,Pregunta_de_liquidacion
+me van a correr mañana,Pregunta_de_liquidacion
+están cuello.,Pregunta_de_liquidacion
+quieren liquidar.,Pregunta_de_liquidacion
+¿ corresponde liquidación?,Pregunta_de_liquidacion
+Liquidación,Pregunta_de_liquidacion
+me corren,Pregunta_de_liquidacion
+¿ pagar liquidación?,Pregunta_de_liquidacion
+¿pagar despidiendo?,Pregunta_de_liquidacion
+¿Si despidiendo cuánto pagar?,Pregunta_de_liquidacion
+¿Cuántos días tocan vacaciones?,Pregunta_de_vacaciones
+Vacaciones,Pregunta_de_vacaciones
+¿Cuánto toca vacaciones?,Pregunta_de_vacaciones
+¿Quisiera saber días corresponden ley?,Pregunta_de_vacaciones
+¿Cuántos días vacaciones?,Pregunta_de_vacaciones
+¿Cómo te hicieron?,Quien_te_creo
+¿Cómo te programaron?,Quien_te_creo
+¿Quién te creó?,Quien_te_creo
+¿Quién te hizo?,Quien_te_creo
+Registrar logo,Registro_de_marca
+Registro marca,Registro_de_marca
+Logo,Registro_de_marca
+Registrar slogan,Registro_de_marca
+Slogan,Registro_de_marca
+¿Cómo registrar marca?,Registro_de_marca
+Registrar marca,Registro_de_marca
+Marca,Registro_de_marca
+utilidades,RepartoUtilidades
+cuánto me deben pagar por el reparto de utilidades,RepartoUtilidades
+"si no me han pagado el reparto de utilidades, qué debo hacer",RepartoUtilidades
+dame info sobre el reparto de utilidades,RepartoUtilidades
+qué es el reparto de utilidades,RepartoUtilidades
+Que hongo,Saludo
+ayúdame,Saludo
+quiubo Max,Saludo
+saludos,Saludo
+ALOH,Saludo
+holi,Saludo
+Hola,Saludo
+Empezar,Saludo
+Tengo un problema,Saludo
+¿Qué pasó?,Saludo
+Otra consulta,Saludo
+Nueva consulta,Saludo
+Aceptar,Saludo
+Me puedes habalar sobre temas de confidencialidad en el trabajo,Temas_de_confidecialidad
+Privacidad,Temas_de_confidecialidad
+Confidencialidad en el trabajo,Temas_de_confidecialidad
+quiero chambear con max,Trabajar
+Quiero colaborar con ustedes,Trabajar
+Como le hago para trabajar con ustedes,Trabajar
+Quiero trabajar con Fractal Abogados,Trabajar
+Servicio Social,Trabajar
+Como puedo liberar mi servicio social con ustedes,Trabajar
+Me gustaría hacer mi servicio social con ustedes,Trabajar
+joder coño,Trolleo
+saca las caguamas,Trolleo
+me amas,Trolleo
+Tienes packs,Trolleo
+sexo,Trolleo
+ella me ama,Trolleo
+feo,Trolleo
+te amo,Trolleo
+pasa el pack,Trolleo
+más de una,Mas_de_una_persona
+más de una persona,Mas_de_una_persona
+dos o más,Mas_de_una_persona
+tres o más,Mas_de_una_persona
+2,Mas_de_una_persona
+3,Mas_de_una_persona
+una,Una_persona
+1,Una_persona
+tengo dudas,Tener_duda
+me surgió una duda,Tener_duda
+no me queda claro,Tener_duda
+tengo algunas dudas,Tener_duda
+por empresa,Trabajar_empresa
+empresa,Trabajar_empresa
+outsourcing,Trabajar_outsourcing
+es outsourcing,Trabajar_outsourcing
+divorcio,divorcio
+me quiero divorciar,divorcio
+pensión alimenticia,pension-alimenticia
+guarda y custodia,guarda-custodia
+rectificación de nombre,rectificacion-nombre
+otro tema que no sé,tema-desconocido
+quiero hablar de otro tema,tema-desconocido
