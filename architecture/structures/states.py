@@ -8,6 +8,7 @@ from __future__ import print_function
 import re
 
 from architecture.actuators.messaging import send_message
+from architecture.actuators.markov_message import generate_random_message
 
 class State:
 
@@ -29,16 +30,22 @@ class InitState(State):
         self.username = global_frame['CONTEXT']['first_name']
 
     def run(self):
+        # if self.global_frame['CONTEXT']['intent'] == X:
+        #     ans = generate_random_message(case=X)
         try:
             message = 'INTENT: {}'.format(self.global_frame['CONTEXT']['intent'])
             send_message(self.user_id, message)
         except:
-            send_message(self.user_id, 'Hola, {}'.format(self.username))
+            ans = generate_random_message()
+            send_message(self.user_id, ans)
 
     def get_next_state(self, user_input, parser):
-        intent = parser.intent_parse(user_input['MESSAGE'],
-                                     intents=list(parser.intents.index))
-        self.global_frame['CONTEXT']['intent'] = intent
+        try:
+            intent = parser.intent_parse(user_input['MESSAGE'],
+                                         intents=list(parser.intents.index))
+            self.global_frame['CONTEXT']['intent'] = intent
+        except:
+            pass
         return self
         #if re.search('(queja)|(sugerencia)|(aclaraci[oó]n)', user_input['MESSAGE']):
         #    return Estado2(self.user_id, self.global_frame)
