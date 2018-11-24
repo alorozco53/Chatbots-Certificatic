@@ -6,21 +6,40 @@ from __future__ import division
 from __future__ import print_function
 
 import re
+import random
 
 from architecture.actuators.messaging import send_message
 from architecture.actuators.markov_message import generate_random_message
+
+from architecture.sensors.sentiment import predict_sentiment
+
+MOVIE_LIST = [
+    'Titanic', 
+    'War of the Worlds',
+    'Interstellar',
+    '2001: A Space Odyssey',
+    'Star Wars',
+    'Blade Runner'
+]
 
 class State:
 
     def __init__(self, user_id, **kwargs):
         self.user_id = user_id
-        self.next_states = []
+        self.actions = []
 
     def run(self):
-        pass
+        for action in self.actions:
+            action()
 
     def get_next_state(self, user_input, parser):
         pass
+
+    def join(self, other_state):
+        self.actions += other_state.actions
+        self.get_next_state = other_state.get_next_state
+        return self
+        
 
 class InitState(State):
 
@@ -28,29 +47,22 @@ class InitState(State):
         State.__init__(self, user_id)
         self.global_frame = global_frame
         self.username = global_frame['CONTEXT']['first_name']
+        self.actions = [self.say_hello, self.ask_for_movie]
+        
+    def say_hello(self):
+        send_message(self.user_id, 'Hello, {}! '.format(self.username))
 
-    def run(self):
-        # if self.global_frame['CONTEXT']['intent'] == X:
-        #     ans = generate_random_message(case=X)
-        try:
-            message = 'INTENT: {}'.format(self.global_frame['CONTEXT']['intent'])
-            send_message(self.user_id, message)
-        except:
-            ans = generate_random_message()
-            send_message(self.user_id, ans)
-
-    def get_next_state(self, user_input, parser):
-        try:
-            intent = parser.intent_parse(user_input['MESSAGE'],
-                                         intents=list(parser.intents.index))
-            self.global_frame['CONTEXT']['intent'] = intent
-        except:
-            pass
-        return self
-        #if re.search('(queja)|(sugerencia)|(aclaraci[oó]n)', user_input['MESSAGE']):
-        #    return Estado2(self.user_id, self.global_frame)
-        #else:
-        #    return Estado3(self.user_id, self.global_frame)
+    def ask_for_movie(self):
+        movie_i = random.randint(0, len(MOVIE_LIST) - 1)
+        movie = MOVIE_LIST[movie_i]
+        message = 'What do you think about {}?'.format(movie)
+        send_message(self.user_id, message)
+        
+    def get_next_state(self, user_input):
+        if predict_sentiment(user_input['MESSAGE']) == 0:
+            return EstadoNeg(self.user_id, self.global_frame)
+        else:
+            return EstadoPos(self.user_id, self.global_frame)
 
 class Estado2(State):
 
@@ -58,24 +70,48 @@ class Estado2(State):
         State.__init__(self, user_id)
         self.global_frame = global_frame
         self.username = global_frame['CONTEXT']['first_name']
-
-    def run(self):
-        message = 'Lo lamento {}, ¿te puedo ayudar con algo?'.format(self.username)
+        self.actions = [self.respond]
+        
+    def respond(self):
+        movie_i = random.randint(0, len(MOVIE_LIST) - 1)
+        movie = MOVIE_LIST[movie_i]
+        message = 'What do you think about {}?'.format(movie)
         send_message(self.user_id, message)
 
     def get_next_state(self, user_input):
-        return InitState(self.user_id, self.global_frame)
+        if predict_sentiment(user_input['MESSAGE']) == 0:
+            return EstadoNeg(self.user_id, self.global_frame)
+        else:
+            return EstadoPos(self.user_id, self.global_frame)
 
-class Estado3(State):
+class EstadoNeg(State):
 
     def __init__(self, user_id, global_frame):
         State.__init__(self, user_id)
         self.global_frame = global_frame
         self.username = global_frame['CONTEXT']['first_name']
+        self.actions = [self.respond]
+        self.next_state = self.join(Estado2(self.user_id, self.global_frame))
 
-    def run(self):
-        message = '🤡'.format(self.username)
+    def respond(self):
+        message = 'Thank you, I\'ll never watch it'.format(self.username)
         send_message(self.user_id, message)
 
     def get_next_state(self, user_input):
-        return InitState(self.user_id, self.global_frame)
+        return self.next_state
+
+class EstadoPos(State):
+
+    def __init__(self, user_id, global_frame):
+        State.__init__(self, user_id)
+        self.global_frame = global_frame
+        self.username = global_frame['CONTEXT']['first_name']
+        self.actions = [self.respond]
+        self.next_state = self.join(Estado2(self.user_id, self.global_frame))
+
+    def respond(self):
+        message = 'Great, I\'ll watch it tonight'.format(self.username)
+        send_message(self.user_id, message)
+
+    def get_next_state(self, user_input):
+        return self.next_state

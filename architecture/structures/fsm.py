@@ -25,5 +25,4 @@ class FSM:
         self.current_state.run()
 
     def transition(self, user_input):
-        self.current_state = self.current_state.get_next_state(user_input,
-                                                               self.parser)
+        self.current_state = self.current_state.get_next_state(user_input)
